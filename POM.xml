@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- 当前Maven项目使用的描述规范版本号 -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 配置当前Maven项目的项目坐标 -->
+    <!-- 项目组织唯一的标识符 -->
+    <groupId>com.miniSpringboot</groupId>
+    <!-- 项目的唯一的标识符 -->
+    <artifactId>MavenTest</artifactId>
+    <!-- 项目的版本号 -->
+    <version>0.0.1-SNAPSHOT</version>
+    <!-- 当前项目的打包方式 -->
+    <packaging>jar</packaging>
+
+    <!--
+    所有jar文件依赖的声明都放在<dependencies>标签下的子标签<dependency>当中
+    每一个依赖单独创建一个<dependency>子标签
+-->
+    <dependencies>
+        <!-- 对junit-4.12版本的jar文件依赖声明 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- log4j 日志组件 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+    </dependencies>
+</project>
