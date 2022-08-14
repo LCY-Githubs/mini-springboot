@@ -1,9 +1,5 @@
 package com.miniSpringboot.core;
 
-
-import com.sun.tools.javac.util.StringUtils;
-
-import javax.xml.stream.events.Characters;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
@@ -82,13 +78,7 @@ public class ClassPathAnnotationApplicationContext {
         Object o;
         try {
            o = cla.getDeclaredConstructor().newInstance();
-        } catch (InstantiationException e) {
-            throw new RuntimeException(e);
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException(e);
-        } catch (InvocationTargetException e) {
-            throw new RuntimeException(e);
-        } catch (NoSuchMethodException e) {
+        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
         return o;
