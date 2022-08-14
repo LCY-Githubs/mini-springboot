@@ -108,6 +108,7 @@ public class ClassPathAnnotationApplicationContext {
                 Object bean = getBean(name);
                 //给属性赋值
                 if (bean!=null){
+                    //设置属性可写
                     field.setAccessible(true);
                     field.set(o, bean);
                 }
